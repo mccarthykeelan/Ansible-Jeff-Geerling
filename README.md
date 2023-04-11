@@ -1,20 +1,16 @@
 # Ansible
 
-<img src="https://ai.github.io/size-limit/logo.svg" align="right"
-     alt="Size Limit logo by Anton Lovchikov" width="120" height="178">
+<img src="https://github.com/mccarthykeelan/Ansible-Jeff-Geerling/blob/main/images/ansible-logo.png" align="right"
+     alt="Size Limit logo by Anton Lovchikov" width="240" height="240">
 
 In simple terms, Ansible is an open-source automation tool used for IT tasks such as software deployment, configuration management, and application orchestration. It allows you to automate repetitive tasks, and manage multiple systems at scale, from a single control node. Ansible uses a simple and easy-to-read language called YAML to define the desired state of your infrastructure, and then executes tasks on remote nodes using SSH or WinRM protocols, without requiring any additional software to be installed on the target systems.
 
-* **ES modules** and **tree-shaking** support.
-* Add Size Limit to **Travis CI**, **Circle CI**, **GitHub Actions**
-  or another CI system to know if a pull request adds a massive dependency.
-* **Modular** to fit different use cases: big JS applications
-  that use their own bundler or small npm libraries with many files.
-* Can calculate **the time** it would take a browser
-  to download and **execute** your JS. Time is a much more accurate
-  and understandable metric compared to the size in bytes.
-* Calculations include **all dependencies and polyfills**
-  used in your JS.
+* Simple and Easy to Learn: Ansible uses a simple YAML-based syntax that is easy to understand and learn, even for non-programmers. It is also agentless, meaning that no additional software needs to be installed on target systems, making it easy to get started with.
+* Powerful Orchestration: Ansible can orchestrate complex workflows and automate multi-tier applications across multiple systems, both on-premises and in the cloud. It supports various cloud platforms like AWS, Azure, Google Cloud, and OpenStack.
+* Declarative Language: Ansible uses a declarative language that specifies the desired state of your infrastructure, rather than a series of procedural steps. This makes it easy to define complex configurations and ensure that all systems are configured consistently.
+* Highly Scalable: Ansible is designed to scale horizontally and can manage thousands of nodes simultaneously. It uses a push-based architecture that enables rapid, parallel execution across multiple systems.
+* Extensibility: Ansible can be extended with custom modules, plugins, and scripts, making it highly adaptable to any environment or workflow. It also integrates with other tools and technologies, such as Docker, Kubernetes, Git, Jenkins, and many more.
+
 
 <p align="center">
   <img src="./img/example.png" alt="Size Limit CLI" width="738">
