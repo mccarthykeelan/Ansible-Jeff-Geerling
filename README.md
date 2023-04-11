@@ -45,7 +45,7 @@ We are using [Statoscope] for this analysis.
 [cult-img]:      http://cultofmartians.com/assets/badges/badge.svg
 [cult]:          http://cultofmartians.com/tasks/size-limit-config.html
 
-## Who Uses Size Limit
+## Who Uses Ansible
 
 * [MobX](https://github.com/mobxjs/mobx)
 * [Material-UI](https://github.com/callemall/material-ui)
@@ -66,23 +66,11 @@ We are using [Statoscope] for this analysis.
 
 ## How It Works
 
-1. Size Limit contains a CLI tool, 3 plugins (`file`, `webpack`, `time`)
-   and 3 plugin presets for popular use cases (`app`, `big-lib`, `small-lib`).
-   A CLI tool finds plugins in `package.json` and loads the config.
-2. If you use the `webpack` plugin, Size Limit will bundle your JS files into
-   a single file. It is important to track dependencies and webpack polyfills.
-   It is also useful for small libraries with many small files and without
-   a bundler.
-3. The `webpack` plugin creates an empty webpack project, adds your library
-   and looks for the bundle size difference.
-4. The `time` plugin compares the current machine performance with that of
-   a low-priced Android devices to calculate the CPU throttling rate.
-5. Then the `time` plugin runs headless Chrome (or desktop Chrome if it’s
-   available) to track the time a browser takes to compile and execute your JS.
-   Note that these measurements depend on available resources and might
-   be unstable. [See here](https://github.com/mbalabash/estimo/issues/5)
-   for more details.
-
+1. Ansible uses a client-server architecture, where the control node acts as the server and the managed nodes act as clients. The control node runs Ansible scripts, called playbooks, and sends commands to the managed nodes over SSH or WinRM protocols.
+2. Ansible uses a push-based model to execute tasks on managed nodes. The control node pushes the tasks to the managed nodes and waits for the tasks to complete before moving on to the next task.
+3. Ansible uses an inventory file to specify the managed nodes and organize them into groups. The inventory file can be static or dynamic and can include details like IP addresses, hostnames, and SSH keys.
+4. Ansible uses modules to perform specific tasks on the managed nodes. Modules are small pieces of code that can be combined to perform complex operations like installing software, configuring services, and managing files.
+5. Ansible uses a declarative language called YAML to define the desired state of your infrastructure. Playbooks specify the tasks to be executed and the order in which they should be executed. Ansible compares the desired state to the current state of the managed nodes and makes the necessary changes to ensure that the desired state is achieved.
 
 ## Usage
 
